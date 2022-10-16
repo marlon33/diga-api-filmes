@@ -72,7 +72,7 @@ class Token
                         401
                     );
                 }
-                return response()->json([$tokenDecode]);
+                return response()->json($tokenDecode);
             }
         } catch (Exception $e) {
             return response()->json([

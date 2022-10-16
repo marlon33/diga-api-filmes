@@ -34,6 +34,11 @@ class Uuid
         if (isset($array[0])) {
             foreach ($array as $key => $value) {
                 foreach ($options as $option) {
+                    if (isset($array[$key]['tag'][0])) {
+                        foreach ($array[$key]['tag'] as $tagKey => $tagValue) {
+                            $array[$key]['tag'][$tagKey]['id'] = $this->id_encode($array[$key]['tag'][$tagKey]['id']);
+                        }
+                    }
                     $array[$key][$option] = $this->id_encode($array[$key][$option]);
                 }
             }

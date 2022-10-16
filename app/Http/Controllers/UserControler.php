@@ -72,4 +72,12 @@ class UserControler extends Controller
             $request->password
         );
     }
+
+    public function authTest(Request $request)
+    {
+        $token = new Token();
+        return response()->json(
+            $token->authToken()
+        );
+    }
 }
