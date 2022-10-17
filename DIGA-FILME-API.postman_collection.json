@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "ce691c3f-a077-400c-860c-4755c84a0704",
+		"name": "DIGA-FILME-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14008992"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Maria Eduarda Braga Oliveira",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mariaeduarabrasgaoliveira15@gmail.comsdffddf",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "umasenhaqualquer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marlonbraga14@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Zarakikenpachi19!",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mariaeduarabragaoliveira15@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "umasenhaqualquer",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "AuthTest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNjY1ODY5NjgyLCJ1c2VyX2lkIjo0OTgxODI0MDAsIm5hbWUiOiJNYXJsb24gQnJhZ2EiLCJlbWFpbCI6Im1hcmxvbmJyYWdhMTRAZ21haWwuY29tIn0.Sc03lwAYNo_vfR0hI40W75P_hkpQcbcpMuXBz1s7STE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/authTest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"authTest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNjY1ODY5NjgyLCJ1c2VyX2lkIjo0OTgxODI0MDAsIm5hbWUiOiJNYXJsb24gQnJhZ2EiLCJlbWFpbCI6Im1hcmxvbmJyYWdhMTRAZ21haWwuY29tIn0.Sc03lwAYNo_vfR0hI40W75P_hkpQcbcpMuXBz1s7STE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "junior",
+									"type": "text"
+								},
+								{
+									"key": "movie",
+									"type": "file",
+									"src": "screen-capture.mp4"
+								},
+								{
+									"key": "size_file",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "date_create",
+									"value": "2022-10-15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/movie/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"movie",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Movie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNjY1ODY5NjgyLCJ1c2VyX2lkIjo0OTgxODI0MDAsIm5hbWUiOiJNYXJsb24gQnJhZ2EiLCJlbWFpbCI6Im1hcmxvbmJyYWdhMTRAZ21haWwuY29tIn0.Sc03lwAYNo_vfR0hI40W75P_hkpQcbcpMuXBz1s7STE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/movie/update?movie_id=996364800&name=junior ads&tags[0]=1&tags[1]=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"movie",
+								"update"
+							],
+							"query": [
+								{
+									"key": "movie_id",
+									"value": "996364800"
+								},
+								{
+									"key": "name",
+									"value": "junior ads"
+								},
+								{
+									"key": "tags[0]",
+									"value": "1"
+								},
+								{
+									"key": "tags[1]",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Movie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNjY1ODY5NjgyLCJ1c2VyX2lkIjo0OTgxODI0MDAsIm5hbWUiOiJNYXJsb24gQnJhZ2EiLCJlbWFpbCI6Im1hcmxvbmJyYWdhMTRAZ21haWwuY29tIn0.Sc03lwAYNo_vfR0hI40W75P_hkpQcbcpMuXBz1s7STE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "marlon",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/movie/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"movie",
+								"list"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "a",
+									"disabled": true
+								},
+								{
+									"key": "orderByField",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "ascOrDesc",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tag",
+			"item": [
+				{
+					"name": "Create Tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNjY1ODY5NjgyLCJ1c2VyX2lkIjo0OTgxODI0MDAsIm5hbWUiOiJNYXJsb24gQnJhZ2EiLCJlbWFpbCI6Im1hcmxvbmJyYWdhMTRAZ21haWwuY29tIn0.Sc03lwAYNo_vfR0hI40W75P_hkpQcbcpMuXBz1s7STE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Suspense",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/tag/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tag",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
