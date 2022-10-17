@@ -96,11 +96,11 @@ class MovieController extends Controller
             ]);
         }
         
-        // $token = new Token();
-        // $status = $token->authToken()->getData()->status;
-        // if($status == 'fail'){
-        //     return $token->authToken();
-        // }
+        $token = new Token();
+        $status = $token->authToken()->getData()->status;
+        if($status == 'fail'){
+            return $token->authToken();
+        }
 
         
         $response = $this->repository->updateMovies(
